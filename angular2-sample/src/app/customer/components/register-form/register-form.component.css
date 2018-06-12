@@ -1,0 +1,16 @@
+md-input-container{
+    margin-top: 30px;
+}
+md-select{
+    margin-top: 30px;
+}
+.button-row {
+    width: 100%;
+    margin-top: 30px;
+    text-align: right;
+    align-items: center;
+    justify-content: space-around;
+}
+.button-row button {
+    margin-right: 10px;
+}

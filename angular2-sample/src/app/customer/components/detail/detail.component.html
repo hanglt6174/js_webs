@@ -1,0 +1,31 @@
+<br />
+<md-card>
+    <md-card-title>名簿詳細</md-card-title>
+    <md-card-content>
+
+        <form class="full-width">
+            <md-input-container class="medium-width">
+                <input mdInput placeholder="氏名" readonly value="{{ customer.fullName}}">
+            </md-input-container> <br />
+            <md-input-container class="short-width">
+                <input mdInput placeholder="郵便番号" readonly value="{{ customer.postalCode}}">
+            </md-input-container> <br />
+            <md-input-container class="full-width">
+                <input mdInput placeholder="住所" readonly value="{{ customer.address}}">
+            </md-input-container> <br />
+            <md-input-container class="medium-width">
+                <input mdInput placeholder="電話番号" readonly value="{{ customer.phoneNumber}}">
+            </md-input-container> <br />
+            <md-input-container class="medium-width">
+                <input mdInput placeholder="メールアドレス" readonly value="{{ customer.mailAddress}}">
+            </md-input-container> <br />
+            <md-input-container class="medium-width">
+                <input mdInput placeholder="種別" readonly value="{{ typeName }}">
+            </md-input-container>
+            <div class="button-row">
+                <button md-raised-button (click)="returnSearch()">戻る</button>
+                <button md-raised-button color="primary" (click)="goModify(customer.id)">変更</button>
+            </div>
+        </form>
+    </md-card-content>
+</md-card>

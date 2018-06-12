@@ -1,0 +1,55 @@
+<br />
+<md-card>
+    <md-card-title>名簿更新</md-card-title>
+    <md-card-content>
+
+        <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)" class="full-width">
+            <input type="hidden" value="">
+            <md-input-container class="medium-width">
+                <md-placeholder>氏名 * </md-placeholder>
+                <input mdInput value="" formControlName="fullName" type="text">
+                <md-error align="start">
+                    <control-messages [control]="myForm.controls.fullName"></control-messages>
+                </md-error>
+            </md-input-container> <br />
+            <md-input-container class="medium-width">
+                <md-placeholder>郵便番号 * </md-placeholder>
+                <input mdInput value="" formControlName="postalCode" type="text">
+                <md-error align="start">
+                    <control-messages [control]="myForm.controls.postalCode"></control-messages>
+                </md-error>
+            </md-input-container> <br />
+            <md-input-container class="full-width">
+                <md-placeholder>住所 * </md-placeholder>
+                <input mdInput value="" formControlName="address" type="text">
+                <md-error align="start">
+                    <control-messages [control]="myForm.controls.address"></control-messages>
+                </md-error>
+            </md-input-container> <br />
+            <md-input-container class="short-width">
+                <md-placeholder>電話番号 * </md-placeholder>
+                <input mdInput value="" formControlName="phoneNumber" type="text">
+                <md-error align="start">
+                    <control-messages [control]="myForm.controls.phoneNumber"></control-messages>
+                </md-error>
+            </md-input-container> <br />
+            <md-input-container class="medium-width">
+                <input mdInput placeholder="メールアドレス" value="" formControlName="mailAddress" type="text">
+                <md-error align="start">
+                    <control-messages [control]="myForm.controls.mailAddress"></control-messages>
+                </md-error>
+            </md-input-container> <br />
+            <md-select placeholder="種別 *" formControlName="typeId" class="short-width">
+                <md-option *ngFor="let t of types" [value]="t.id">
+                  {{ t.name}}
+                </md-option>
+            </md-select><br />
+            <div style="font-size: 75%;padding-top: 5px;"> <control-messages [control]="myForm.controls.typeId"></control-messages></div>
+            <div class="button-row">
+                <button md-raised-button (click)="doBack(myForm.value)" type="button">戻る</button>
+                <button md-raised-button (click)="resetData()" type="button">リセット</button>
+                <button md-raised-button color="primary" [disabled]="!myForm.valid" type="submit">更新</button>
+            </div>
+        </form>
+    </md-card-content>
+</md-card>

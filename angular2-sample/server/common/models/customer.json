@@ -1,0 +1,841 @@
+{
+  "name": "customer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "postalCode": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "mailAddress": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "type": {
+      "type": "belongsTo",
+      "model": "customerType",
+      "required": true
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "examples": [
+    {
+      "fullName": "古川 彦好",
+      "postalCode": "133-0051",
+      "address": "東京都江戸川区北小岩8-2-4 エチュード北小岩 1F",
+      "phoneNumber": "03-3595-3084",
+      "mailAddress": "",
+      "typeId": 3
+    },
+    {
+      "fullName": "野崎 和海",
+      "postalCode": "959-3935",
+      "address": "新潟県岩船郡山北町北田中8-10-4",
+      "phoneNumber": "0254-86-6295",
+      "mailAddress": "imuzak02@excite.co.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "亀井 靖雄",
+      "postalCode": "078-8322",
+      "address": "北海道旭川市神楽岡十二条5-15-3",
+      "phoneNumber": "0166-14-1219",
+      "mailAddress": "yso5153@ybb.ne.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "山岡 美喜夫",
+      "postalCode": "311-3514",
+      "address": "茨城県行方市西蓮寺5-8-2 西蓮寺ビル 3階",
+      "phoneNumber": "0299-20-4024",
+      "mailAddress": "oikim0417@combzmail.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "大山 れいや",
+      "postalCode": "859-4769",
+      "address": "長崎県松浦市御厨町西木場免8914",
+      "phoneNumber": "0956-32-9746",
+      "mailAddress": "ayier91@so-net.ne.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "津田 一世",
+      "postalCode": "543-0056",
+      "address": "大阪府大阪市天王寺区堀越町5-14-7 堀越町ハウス",
+      "phoneNumber": "06-6796-8469",
+      "mailAddress": "tdtd@livedoor.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "小田 譲介",
+      "postalCode": "012-0036",
+      "address": "秋田県湯沢市両神4994",
+      "phoneNumber": "0183-58-7254",
+      "mailAddress": "ekusuoj70@example.ad.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "河村 貴浩",
+      "postalCode": "987-2189",
+      "address": "宮城県栗原市高清水下町2636",
+      "phoneNumber": "0228-08-1848",
+      "mailAddress": "kawamura2636@nifty.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "田原 仁三郎",
+      "postalCode": "781-1517",
+      "address": "高知県吾川郡仁淀川町葛原9-10-4",
+      "phoneNumber": "0889-31-6768",
+      "mailAddress": "uorubazniz84@sakura.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "川上 靖雄",
+      "postalCode": "987-0425",
+      "address": "宮城県登米市南方町梶沼前6-7-3",
+      "phoneNumber": "0220-65-2434",
+      "mailAddress": "yasuo_kawakami@tokyo24.com  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "上村 美次",
+      "postalCode": "311-3515",
+      "address": "茨城県行方市井上1-11-1",
+      "phoneNumber": "0299-86-9376",
+      "mailAddress": "arumimak0827@mesh.ne.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "塚本 美喜夫",
+      "postalCode": "997-0006",
+      "address": "山形県鶴岡市福田5-9-2",
+      "phoneNumber": "0235-25-1716",
+      "mailAddress": "tkmt80@example.or.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "須田 敬",
+      "postalCode": "049-1103",
+      "address": "北海道上磯郡知内町重内5-3-3",
+      "phoneNumber": "01392-7-2547",
+      "mailAddress": "ds@example.ad.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "河野 梨華",
+      "postalCode": "420-0863",
+      "address": "静岡県静岡市葵区安東柳町6-2-1",
+      "phoneNumber": "054-598-5342",
+      "mailAddress": "onawak75@dti.ne.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "田中 正次",
+      "postalCode": "999-0605",
+      "address": "山形県西置賜郡飯豊町添川6893",
+      "phoneNumber": "0238-71-7250",
+      "mailAddress": "seizi87@mail.goo.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "田口 陽一郎",
+      "postalCode": "285-0833",
+      "address": "千葉県佐倉市羽鳥1-7-3",
+      "phoneNumber": "043-148-7801",
+      "mailAddress": "itugat2850833@combzmail.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "山本 豊秋",
+      "postalCode": "434-0042",
+      "address": "静岡県浜松市小松2-1-1",
+      "phoneNumber": "053-629-2971",
+      "mailAddress": "ikaoyot0831@nifty.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "庄司 勇美",
+      "postalCode": "969-3101",
+      "address": "福島県耶麻郡猪苗代町土湯沢山5180",
+      "phoneNumber": "0242-37-9381",
+      "mailAddress": "ismsyuz20070421@example.co.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "中井 亜依",
+      "postalCode": "037-0512",
+      "address": "青森県北津軽郡中泊町小泊朝間7-5-3",
+      "phoneNumber": "0173-60-8586",
+      "mailAddress": "ai.nakai@example.ad.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "吉本 郁美",
+      "postalCode": "428-0002",
+      "address": "静岡県島田市福用4090",
+      "phoneNumber": "0547-92-8152",
+      "mailAddress": "ysmt@example.org  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "村井 征四郎",
+      "postalCode": "627-0202",
+      "address": "京都府京丹後市丹後町砂方8-6-3",
+      "phoneNumber": "0772-00-0127",
+      "mailAddress": "murai0127@plala.or.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "岡田 美津枝",
+      "postalCode": "207-0022",
+      "address": "東京都東大和市桜が丘1687",
+      "phoneNumber": "042-180-8190",
+      "mailAddress": "adako@gmail.com  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "大槻 唯",
+      "postalCode": "131-0034",
+      "address": "東京都墨田区堤通5-13-8 フリード堤通",
+      "phoneNumber": "03-3364-1551",
+      "mailAddress": "",
+      "typeId": 2
+    },
+    {
+      "fullName": "宮内 久紀",
+      "postalCode": "869-5224",
+      "address": "熊本県八代市坂本町百済来下5-15-6",
+      "phoneNumber": "0965-87-7097",
+      "mailAddress": "",
+      "typeId": 1
+    },
+    {
+      "fullName": "小柳 興亜",
+      "postalCode": "012-1105",
+      "address": "秋田県雄勝郡羽後町水沢9-6-4",
+      "phoneNumber": "0183-40-6345",
+      "mailAddress": "oyanagi19800309@freeml.co.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "白川 達太郎",
+      "postalCode": "945-0844",
+      "address": "新潟県柏崎市米山台西6-11-5",
+      "phoneNumber": "0257-71-4404",
+      "mailAddress": "tatutarou_sirakawa@web.ad.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "奥山 三平",
+      "postalCode": "981-0123",
+      "address": "宮城県宮城郡利府町沢乙6-15-7 ハイツドリーム沢乙",
+      "phoneNumber": "022-795-6760",
+      "mailAddress": "okuyama-sanpei@plala.or.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "三木 育雄",
+      "postalCode": "059-3101",
+      "address": "北海道日高郡新ひだか町三石富沢4-4-5 マンション三石富沢第2 109",
+      "phoneNumber": "0146-12-6918",
+      "mailAddress": "ikuo6918@t-com.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "東 忠之",
+      "postalCode": "879-7885",
+      "address": "大分県大分市梅が丘3-9-1 栄ビル 311",
+      "phoneNumber": "097-788-8792",
+      "mailAddress": "tadayuki0622@nifty.com  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "和田 真由美",
+      "postalCode": "880-0879",
+      "address": "宮崎県宮崎市宮崎駅東1565",
+      "phoneNumber": "0985-29-9903",
+      "mailAddress": "wada1973@tokyo24.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "秋元 理恵",
+      "postalCode": "771-1401",
+      "address": "徳島県阿波市吉野町柿原9-15-9-6F",
+      "phoneNumber": "0883-99-9310",
+      "mailAddress": "re8720150328@example.gr.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "北原 朋絵",
+      "postalCode": "612-8369",
+      "address": "京都府京都市伏見区村上町1-7-2",
+      "phoneNumber": "075-890-5970",
+      "mailAddress": "kthr93@users.gr.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "大竹 源三郎",
+      "postalCode": "590-0024",
+      "address": "大阪府堺市堺区向陵中町2-8-3 エレガンテ向陵中町 712",
+      "phoneNumber": "072-080-6850",
+      "mailAddress": "ootake-genzaburou@geocities.com  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "宮沢 多美子",
+      "postalCode": "962-0007",
+      "address": "福島県須賀川市下宿町2386",
+      "phoneNumber": "0248-07-5241",
+      "mailAddress": "myzw-tmk@excite.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "片山 正進",
+      "postalCode": "602-0015",
+      "address": "京都府京都市上京区下柳原南半町5662",
+      "phoneNumber": "075-270-0642",
+      "mailAddress": "ubonasam@example.gr.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "五十嵐 有子",
+      "postalCode": "911-0021",
+      "address": "福井県勝山市村岡町栃神谷3-7-3",
+      "phoneNumber": "0779-16-9686",
+      "mailAddress": "yuuko0731@comeon.to  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "角田 敬志",
+      "postalCode": "911-0044",
+      "address": "福井県勝山市荒土町松ヶ崎5-11-6 ベルピア・荒土町松ヶ崎 1205号室",
+      "phoneNumber": "0779-55-8655",
+      "mailAddress": "kiz-kkt@example.gr.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "水野 道和",
+      "postalCode": "606-8235",
+      "address": "京都府京都市左京区田中西春菜町7-12-3",
+      "phoneNumber": "075-305-6985",
+      "mailAddress": "mitikazu6068235@example.com  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "藤沢 庸司",
+      "postalCode": "651-1422",
+      "address": "兵庫県西宮市山口町金仙寺6-6-2",
+      "phoneNumber": "0798-45-6224",
+      "mailAddress": "huzisawa_youzi@scuba-diver.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "高橋 康三",
+      "postalCode": "150-0041",
+      "address": "東京都渋谷区神南8-10-2",
+      "phoneNumber": "03-3976-2959",
+      "mailAddress": "takahasikouzou@odn.ne.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "松島 岩美",
+      "postalCode": "329-4414",
+      "address": "栃木県下都賀郡大平町下高島4-6-4 フラワーパーク下高島 1008号室",
+      "phoneNumber": "0282-53-6404",
+      "mailAddress": "iwm-mtsm@combzmail.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "金城 裕実",
+      "postalCode": "872-0843",
+      "address": "大分県宇佐市安心院町筌ノ口7-10-4 フラワーパーク安心院町筌ノ口 1F",
+      "phoneNumber": "0978-38-6473",
+      "mailAddress": "uojnik1017@nifty.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "北川 優紀",
+      "postalCode": "939-1826",
+      "address": "富山県南砺市瀬戸6-2-9",
+      "phoneNumber": "0763-13-6597",
+      "mailAddress": "ikuy1989@excite.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "坂田 光範",
+      "postalCode": "689-4505",
+      "address": "鳥取県日野郡日野町舟場3-4-2",
+      "phoneNumber": "0859-85-4535",
+      "mailAddress": "skt82@rakuten.co.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "今野 結衣",
+      "postalCode": "916-0301",
+      "address": "福井県丹生郡越前町梨子ヶ平3-14-2-7階",
+      "phoneNumber": "0778-61-5308",
+      "mailAddress": "konno.yui@sannet.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "黒川 勝英",
+      "postalCode": "822-0021",
+      "address": "福岡県直方市新知町4-7-7",
+      "phoneNumber": "09492-2-3193",
+      "mailAddress": "katuhide1127@ath.cx  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "高田 義武",
+      "postalCode": "732-0821",
+      "address": "広島県広島市南区大須賀町8-14-2",
+      "phoneNumber": "082-711-7483",
+      "mailAddress": "ktsy80@hi-ho.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "中原 菜美",
+      "postalCode": "080-1247",
+      "address": "北海道河東郡士幌町平和9-14-3",
+      "phoneNumber": "01564-9-8662",
+      "mailAddress": "nkhr8008rhkn@ybb.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "栗田 良信",
+      "postalCode": "514-0304",
+      "address": "三重県津市雲出本郷町8-7-2 パークハイツ雲出本郷町 1501",
+      "phoneNumber": "059-675-7368",
+      "mailAddress": "bnsy1994@hotmail.co.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "近藤 克三",
+      "postalCode": "944-0114",
+      "address": "新潟県上越市板倉区達野5-14-2",
+      "phoneNumber": "025-277-1800",
+      "mailAddress": "mtk5142@livedoor.com  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "小池 勝夫",
+      "postalCode": "104-0055",
+      "address": "東京都中央区豊海町1-1-9",
+      "phoneNumber": "03-3079-0230",
+      "mailAddress": "osm90eaccess@eaccess.net  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "竹村 準郎",
+      "postalCode": "369-1874",
+      "address": "埼玉県秩父市和泉町5-9-7",
+      "phoneNumber": "0494-18-9287",
+      "mailAddress": "junrou.takemura@infoseek.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "村上 葉子",
+      "postalCode": "794-1309",
+      "address": "愛媛県今治市大三島町宗方4-7-9",
+      "phoneNumber": "0898-64-9927",
+      "mailAddress": "yuk75@iij.ad.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "三好 とく子",
+      "postalCode": "198-0172",
+      "address": "東京都青梅市沢井7-15-1 ピソブランコ・沢井 1409",
+      "phoneNumber": "0428-92-8572",
+      "mailAddress": "isoyim88@aitai.ne.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "窪田 軍市",
+      "postalCode": "705-0026",
+      "address": "岡山県備前市佐山1704",
+      "phoneNumber": "086-304-9059",
+      "mailAddress": "guniti82@hotmail.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "西村 雅生",
+      "postalCode": "870-0848",
+      "address": "大分県大分市賀来北6-11-6",
+      "phoneNumber": "097-667-9950",
+      "mailAddress": "nsmr1980@infoseek.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "塚田 敬生",
+      "postalCode": "786-0042",
+      "address": "高知県高岡郡四万十町黒石3-7-2 ノースコート黒石 10F",
+      "phoneNumber": "050-5248-7226",
+      "mailAddress": "yukio1989@iij.ad.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "三輪 靖雄",
+      "postalCode": "521-1213",
+      "address": "滋賀県東近江市神郷町2-8-8 メルシー神郷町",
+      "phoneNumber": "0748-26-2696",
+      "mailAddress": "mw@example.ad.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "森田 秀次郎",
+      "postalCode": "202-0004",
+      "address": "東京都西東京市下保谷1-10-4",
+      "phoneNumber": "042-732-2525",
+      "mailAddress": "uorizedih84@example.net  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "山内 則昭",
+      "postalCode": "646-1211",
+      "address": "和歌山県田辺市和田1543",
+      "phoneNumber": "0739-06-3382",
+      "mailAddress": "yamauti_noriaki@yahoo.co.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "上原 幸博",
+      "postalCode": "699-4221",
+      "address": "島根県江津市桜江町市山9-15-5",
+      "phoneNumber": "0855-22-4433",
+      "mailAddress": "rhu699996uhr@infoseek.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "浜崎 茂也",
+      "postalCode": "143-0014",
+      "address": "東京都大田区大森中8-1-5",
+      "phoneNumber": "03-3802-8367",
+      "mailAddress": "",
+      "typeId": 3
+    },
+    {
+      "fullName": "内田 泳助",
+      "postalCode": "975-0058",
+      "address": "福島県南相馬市原町区片倉4-13-1",
+      "phoneNumber": "0244-54-9922",
+      "mailAddress": "aditu1976@ybb.ne.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "岡本 澄夫",
+      "postalCode": "243-0126",
+      "address": "神奈川県厚木市岡津古久5-12-2 エポカ岡津古久マンション 1011",
+      "phoneNumber": "046-582-6510",
+      "mailAddress": "okamoto2003@sunfield.ne.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "阿部 紀世実",
+      "postalCode": "329-4314",
+      "address": "栃木県下都賀郡岩舟町小野寺3-9-8 レジデンス小野寺 1114号室",
+      "phoneNumber": "0282-00-7710",
+      "mailAddress": "abe.kiyomi@hi-ho.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "西原 達太郎",
+      "postalCode": "183-0052",
+      "address": "東京都府中市新町6-12-7 東横イン・新町 806号室",
+      "phoneNumber": "042-873-7475",
+      "mailAddress": "tatutarou0907@geocities.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "大橋 裕実",
+      "postalCode": "208-0021",
+      "address": "東京都武蔵村山市三ツ藤7-7-1 エポカ三ツ藤 902",
+      "phoneNumber": "042-413-1779",
+      "mailAddress": "oohasi1994@example.or.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "高田 繁樹",
+      "postalCode": "949-1325",
+      "address": "新潟県糸魚川市崩1-10-4",
+      "phoneNumber": "0255-79-1897",
+      "mailAddress": "sgk949949kgs@gmail.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "吉沢 市雄",
+      "postalCode": "600-8421",
+      "address": "京都府京都市下京区童侍者町3-8-6",
+      "phoneNumber": "075-144-9492",
+      "mailAddress": "awazisoy0711@sakura.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "長島 征吾",
+      "postalCode": "097-0022",
+      "address": "北海道稚内市中央1678",
+      "phoneNumber": "0162-60-8595",
+      "mailAddress": "gis@gmail.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "和田 睦男",
+      "postalCode": "859-4504",
+      "address": "長崎県松浦市志佐町栢木免3-8-1",
+      "phoneNumber": "0956-97-4496",
+      "mailAddress": "wada@mxi.asp.home.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "浅田 友隆",
+      "postalCode": "441-0152",
+      "address": "愛知県豊橋市前芝町4458",
+      "phoneNumber": "0532-09-9066",
+      "mailAddress": "tomotakaasada@example.net  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "豊田 佐千雄",
+      "postalCode": "077-0015",
+      "address": "北海道留萌市緑ヶ丘町8-11-3",
+      "phoneNumber": "0164-73-6900",
+      "mailAddress": "",
+      "typeId": 2
+    },
+    {
+      "fullName": "大久保 敬志",
+      "postalCode": "111-0042",
+      "address": "東京都台東区寿4600",
+      "phoneNumber": "03-3481-5290",
+      "mailAddress": "obukoo111@example.ac.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "向井 哲昭",
+      "postalCode": "150-0031",
+      "address": "東京都渋谷区桜丘町9-7-2 プチドミール桜丘町 14階",
+      "phoneNumber": "03-3481-7844",
+      "mailAddress": "mukai@example.ac.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "上田 昭二",
+      "postalCode": "414-0016",
+      "address": "静岡県伊東市岡広町1-6-7",
+      "phoneNumber": "0557-93-3605",
+      "mailAddress": "adeu167761ueda@mxi.asp.home.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "新井 尚平",
+      "postalCode": "084-0924",
+      "address": "北海道釧路市鶴野5-13-3",
+      "phoneNumber": "0154-14-9186",
+      "mailAddress": "ari1976@tiki.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "永井 孝市",
+      "postalCode": "920-8217",
+      "address": "石川県金沢市近岡町2-14-2 フラワーパーク近岡町 1103",
+      "phoneNumber": "076-388-5585",
+      "mailAddress": "itiuok920@example.or.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "宮原 威佐夫",
+      "postalCode": "408-0034",
+      "address": "山梨県北杜市長坂町大八田8-11-2 エステート長坂町大八田",
+      "phoneNumber": "0551-05-6446",
+      "mailAddress": "osi0812@example.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "梅田 善英",
+      "postalCode": "753-0084",
+      "address": "山口県山口市諸願小路5-8-8",
+      "phoneNumber": "083-180-7928",
+      "mailAddress": "yosihide.umeta@example.ad.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "谷 桂",
+      "postalCode": "514-0304",
+      "address": "三重県津市雲出本郷町9-14-3",
+      "phoneNumber": "059-503-1210",
+      "mailAddress": "kei_tani@tokyo24.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "村井 典生",
+      "postalCode": "063-0012",
+      "address": "北海道札幌市西区福井5-15-9",
+      "phoneNumber": "011-338-1184",
+      "mailAddress": "",
+      "typeId": 2
+    },
+    {
+      "fullName": "永田 史男",
+      "postalCode": "104-0052",
+      "address": "東京都中央区月島4-6-6 ハイシティ月島",
+      "phoneNumber": "03-3055-1519",
+      "mailAddress": "hmo2005@infoseek.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "河野 凱次",
+      "postalCode": "366-0817",
+      "address": "埼玉県深谷市柏合3-3-5 柏合アパート1号",
+      "phoneNumber": "048-069-8405",
+      "mailAddress": "onawak1988@livedoor.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "亀井 初美",
+      "postalCode": "515-0802",
+      "address": "三重県松阪市猟師町4-7-5",
+      "phoneNumber": "0598-75-4133",
+      "mailAddress": "imk4133@asp.home.ne.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "岡本 道和",
+      "postalCode": "321-4305",
+      "address": "栃木県真岡市荒町9773",
+      "phoneNumber": "0285-10-4462",
+      "mailAddress": "okamoto1993@sannet.ne.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "宮田 直武",
+      "postalCode": "869-1821",
+      "address": "熊本県阿蘇郡高森町中2-10-5 グランフォーラム中 1315号室",
+      "phoneNumber": "0967-68-5030",
+      "mailAddress": "tym09222290myt@freeml.co.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "岸 彰揮",
+      "postalCode": "089-3334",
+      "address": "北海道中川郡本別町北2-5-5",
+      "phoneNumber": "01562-8-2334",
+      "mailAddress": "isik0893334@geocities.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "宮本 奈緒",
+      "postalCode": "939-8204",
+      "address": "富山県富山市根塚町7-9-1",
+      "phoneNumber": "076-573-2775",
+      "mailAddress": "nao04example@example.net  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "東 兼一",
+      "postalCode": "616-0024",
+      "address": "京都府京都市西京区嵐山宮町2-13-4-10F",
+      "phoneNumber": "075-744-0023",
+      "mailAddress": "uzakenak@goo.ne.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "西本 三光",
+      "postalCode": "355-0805",
+      "address": "埼玉県比企郡滑川町水房7250",
+      "phoneNumber": "0493-11-5634",
+      "mailAddress": "uretutim0213@combzmail.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "森本 奈緒実",
+      "postalCode": "311-3111",
+      "address": "茨城県東茨城郡茨城町馬渡7-7-5 馬渡ハイツA 308号室",
+      "phoneNumber": "029-651-0925",
+      "mailAddress": "morimoto_naomi@mesh.ne.jp  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "川上 ナツ子",
+      "postalCode": "753-0041",
+      "address": "山口県山口市東山3-1-4",
+      "phoneNumber": "083-423-4423",
+      "mailAddress": "ntk_kwkm@hotmail.com  ",
+      "typeId": 2
+    },
+    {
+      "fullName": "松浦 松次郎",
+      "postalCode": "162-0806",
+      "address": "東京都新宿区榎町4-7-7",
+      "phoneNumber": "03-3364-0920",
+      "mailAddress": "matuzirou.matuura@eaccess.net  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "長田 清一",
+      "postalCode": "039-2525",
+      "address": "青森県上北郡七戸町七戸5224",
+      "phoneNumber": "0176-69-1804",
+      "mailAddress": "",
+      "typeId": 1
+    },
+    {
+      "fullName": "田村 真紀子",
+      "postalCode": "995-0034",
+      "address": "山形県村山市楯岡五日町6-10-1",
+      "phoneNumber": "0237-29-0193",
+      "mailAddress": "okikam0193@yahoo.co.jp  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "宮本 厚成",
+      "postalCode": "290-0207",
+      "address": "千葉県市原市海士有木3-3-3",
+      "phoneNumber": "0436-13-6481",
+      "mailAddress": "miyamoto0923@ath.cx  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "西田 智治",
+      "postalCode": "600-8816",
+      "address": "京都府京都市下京区西新屋敷中堂寺町7-10-1",
+      "phoneNumber": "075-562-2457",
+      "mailAddress": "nsttmhrtokyo24@tokyo24.com  ",
+      "typeId": 1
+    },
+    {
+      "fullName": "竹中 弘人",
+      "postalCode": "918-8225",
+      "address": "福井県福井市宮地町8-8-2 ニューシティ宮地町 1F",
+      "phoneNumber": "0776-67-1315",
+      "mailAddress": "hirototakenaka@web.ad.jp  ",
+      "typeId": 3
+    },
+    {
+      "fullName": "金城 田鶴子",
+      "postalCode": "240-0102",
+      "address": "神奈川県横須賀市荻野7-12-1",
+      "phoneNumber": "046-331-6834",
+      "mailAddress": "",
+      "typeId": 3
+    }
+  ]
+}
